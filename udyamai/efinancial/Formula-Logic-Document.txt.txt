@@ -1,0 +1,162 @@
+UDYAMAI – FINANCIAL CALCULATOR
+FORMULA & LOGIC DOCUMENT
+
+SIH 2026 – SIH26092
+Role: Financial Logic Developer
+
+
+1. PURPOSE
+
+The Financial Calculator is used to estimate loan repayment values based on:
+
+• Loan Amount
+• Annual Interest Rate
+• Loan Tenure
+
+The calculator provides:
+
+• Monthly EMI
+• Total Interest
+• Total Repayment
+
+
+2. INPUTS
+
+Loan Amount (P)
+Annual Interest Rate
+Loan Tenure in Years
+
+Optional input:
+Monthly Income
+
+
+3. EMI CALCULATION
+
+Monthly Interest Rate:
+
+r = Annual Interest Rate / (12 × 100)
+
+Number of Monthly Payments:
+
+n = Loan Tenure × 12
+
+
+For an interest rate greater than zero:
+
+EMI = P × r × (1 + r)^n / ((1 + r)^n − 1)
+
+
+4. ZERO-INTEREST CASE
+
+If the interest rate is 0%:
+
+EMI = P / n
+
+This prevents division by zero and calculates equal monthly repayments.
+
+
+5. TOTAL REPAYMENT
+
+Total Repayment = EMI × n
+
+
+6. TOTAL INTEREST
+
+Total Interest = Total Repayment − Loan Amount
+
+
+7. AFFORDABILITY INFORMATION
+
+The calculator can compare the monthly EMI with the entered monthly income.
+
+Repayment Ratio:
+
+Repayment Ratio = (EMI / Monthly Income) × 100
+
+This is shown as informational guidance only.
+
+It is NOT an official government eligibility rule or threshold.
+
+
+8. LOAN COMPARISON
+
+The calculator can compare two loan scenarios using:
+
+• Loan Amount
+• Interest Rate
+• Loan Tenure
+• Monthly EMI
+• Total Interest
+• Total Repayment
+
+The comparison helps display how different loan assumptions affect repayment.
+
+
+9. SCHEME DATA
+
+Scheme-related financial information is stored separately in:
+
+schemes.json
+
+The calculator logic is kept separate from the scheme database so that scheme-specific financial values can be supplied when available.
+
+
+10. IMPORTANT DATA RULE
+
+If the supplied scheme reference does not specify an interest rate, loan limit, repayment tenure, or other financial value, the calculator must NOT invent that value.
+
+Only values supported by the available scheme data should be used.
+
+
+11. MORATORIUM
+
+Moratorium calculation is not currently implemented as a scheme-specific calculation.
+
+The supplied scheme reference does not provide sufficient scheme-specific moratorium values for all schemes.
+
+No moratorium period has been invented.
+
+
+12. OUTPUTS
+
+The calculator displays:
+
+• Monthly EMI
+• Total Interest
+• Total Repayment
+• Repayment Ratio
+• Remaining Income
+• Affordability information
+
+
+13. VALIDATION
+
+The calculator validates required inputs before performing calculations.
+
+Invalid or missing values are rejected with an appropriate message.
+
+
+14. IMPLEMENTATION FILE
+
+Main calculation logic:
+
+script.js
+
+User interface:
+
+index.html
+
+Styling:
+
+style.css
+
+Scheme data:
+
+schemes.json
+
+
+15. NOTE
+
+The Financial Calculator provides estimated calculations based on the values entered by the user.
+
+It does not represent an official loan sanction, approval, or government eligibility decision.

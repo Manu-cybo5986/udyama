@@ -1,0 +1,80 @@
+UDYAMAI – FINANCIAL CALCULATOR
+TEST CASES
+
+SIH 2026 – SIH26092
+Role: Financial Logic Developer
+
+
+TEST CASE 1
+
+Loan Amount: ₹5,00,000
+Annual Interest Rate: 8.5%
+Loan Tenure: 5 years
+
+Expected Monthly EMI: ₹10,258.27
+Expected Total Interest: ₹1,15,495.94
+Expected Total Repayment: ₹6,15,495.94
+
+
+TEST CASE 2
+
+Loan Amount: ₹1,00,000
+Annual Interest Rate: 0%
+Loan Tenure: 2 years
+
+Expected Monthly EMI: ₹4,166.67
+Expected Total Interest: ₹0.00
+Expected Total Repayment: ₹1,00,000.00
+
+
+TEST CASE 3
+
+Loan Amount: ₹2,50,000
+Annual Interest Rate: 12%
+Loan Tenure: 3 years
+
+Expected Monthly EMI: ₹8,303.58
+Expected Total Interest: ₹48,928.79
+Expected Total Repayment: ₹2,98,928.79
+
+
+TEST CASE 4
+
+Loan Amount: ₹10,00,000
+Annual Interest Rate: 6.5%
+Loan Tenure: 10 years
+
+Expected Monthly EMI: ₹11,354.80
+Expected Total Interest: ₹3,62,575.73
+Expected Total Repayment: ₹13,62,575.73
+
+
+TEST CASE 5
+
+Loan Amount: ₹75,000
+Annual Interest Rate: 15%
+Loan Tenure: 1 year
+
+Expected Monthly EMI: ₹6,769.37
+Expected Total Interest: ₹6,232.48
+Expected Total Repayment: ₹81,232.48
+
+
+VERIFICATION
+
+These test cases were used to verify the EMI, total interest,
+and total repayment calculations in the Financial Calculator.
+
+The expected values are based on the EMI formula documented
+in Formula-Logic-Document.txt.
+
+The calculator outputs should match the expected values
+within normal rounding to two decimal places.
+
+
+IMPORTANT
+
+These are calculation test cases only.
+
+They do not represent official government loan rates,
+eligibility criteria, or loan approval decisions.

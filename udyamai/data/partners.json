@@ -1,0 +1,109 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.7873, 26.9124] },
+      "properties": { 
+        "id": 1,
+        "name": "Rajasthan State Channelizing Agency (Main)", 
+        "category": "SCA", 
+        "region": "Jaipur Central",
+        "contact": "+91-141-2301000",
+        "loanTypes": ["Micro Credit", "Self-Help Group Loans"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.8000, 26.8500] },
+      "properties": { 
+        "id": 2,
+        "name": "Malviya Nagar Regional Rural Bank", 
+        "category": "RRB", 
+        "region": "Jaipur South",
+        "contact": "+91-141-2745000",
+        "loanTypes": ["Agriculture Loan", "Kisan Credit Card"],
+        "hasHighNPA": true 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.7500, 26.9200] },
+      "properties": { 
+        "id": 3,
+        "name": "Vaishali Micro-Finance Corp", 
+        "category": "NBFC", 
+        "region": "Jaipur West",
+        "contact": "+91-141-2556789",
+        "loanTypes": ["Micro Loan", "MSME Loan"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.7994, 26.9197] },
+      "properties": { 
+        "id": 4,
+        "name": "HDFC Bank – MI Road", 
+        "category": "Bank", 
+        "region": "Jaipur Central",
+        "contact": "+91-141-2987654",
+        "loanTypes": ["Personal Loan", "Home Loan", "MSME Loan"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.8018, 26.8870] },
+      "properties": { 
+        "id": 5,
+        "name": "Axis Bank – Tonk Road", 
+        "category": "Bank", 
+        "region": "Jaipur South",
+        "contact": "+91-141-2312345",
+        "loanTypes": ["Business Loan", "MSME Loan", "Personal Loan"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.7660, 26.8742] },
+      "properties": { 
+        "id": 6,
+        "name": "Mansarovar SCA Help Center", 
+        "category": "SCA", 
+        "region": "Jaipur West",
+        "contact": "+91-141-2600100",
+        "loanTypes": ["Subsidized Loans", "Government Schemes"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.8133, 26.8310] },
+      "properties": { 
+        "id": 7,
+        "name": "Sanganer Gramin Bank", 
+        "category": "RRB", 
+        "region": "Jaipur South",
+        "contact": "+91-141-2910011",
+        "loanTypes": ["Agriculture Loan", "Dairy Loan"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [75.7407, 26.9145] },
+      "properties": { 
+        "id": 8,
+        "name": "CapFirst NBFC – Vaishali", 
+        "category": "NBFC", 
+        "region": "Jaipur West",
+        "contact": "+91-141-2543210",
+        "loanTypes": ["Two-Wheeler Loan", "Consumer Loan"],
+        "hasHighNPA": false 
+      }
+    }
+  ]
+}

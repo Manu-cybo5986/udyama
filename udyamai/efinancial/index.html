@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UdyamAI | Financial Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <div class="gov-bar">
+
+        <div class="gov-left">
+            <span class="gov-dot"></span>
+
+            <strong data-en="Government Scheme Assistance Prototype" data-hi="सरकारी योजना सहायता प्रोटोटाइप">
+                Government Scheme Assistance Prototype
+            </strong>
+
+            <span class="gov-divider">|</span>
+
+            <span>SIH 2026 • SIH26092</span>
+        </div>
+
+
+        <div class="gov-right">
+
+            <button type="button">☎</button>
+            <button type="button">A-</button>
+            <button type="button">A</button>
+            <button type="button">A+</button>
+
+            <button type="button" id="languageToggle">
+                हिन्दी
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="brand-area">
+
+            <div class="brand-emblem">
+                ✺
+            </div>
+
+            <div class="brand-text">
+
+                <h1>
+                    Udyam<span>AI</span>
+                </h1>
+
+                <div class="brand-tag" data-en="SIH 2026 Prototype" data-hi="SIH 2026 प्रोटोटाइप">
+                    SIH 2026 Prototype
+                </div>
+
+                <p data-en="National Scheme Matching & Financial Assistance Portal"
+                    data-hi="राष्ट्रीय योजना मिलान एवं वित्तीय सहायता पोर्टल">
+                    National Scheme Matching &amp; Financial Assistance Portal
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="header-information">
+
+            <strong data-en="Financial Assistance Services" data-hi="वित्तीय सहायता सेवाएँ">
+                Financial Assistance Services
+            </strong>
+
+            <p data-en="Scheme information, loan calculations and repayment estimates."
+                data-hi="योजना की जानकारी, ऋण गणना और पुनर्भुगतान का अनुमान।">
+                Scheme information, loan calculations and repayment estimates.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="main-nav">
+
+        <div class="nav-inner">
+
+            <a href="#" class="active" data-section="homeSection" data-en="Home" data-hi="होम">
+                Home
+            </a>
+
+            <a href="#" data-section="schemeMatchingSection" data-en="Scheme Matching" data-hi="योजना मिलान">
+                Scheme Matching
+            </a>
+
+            <a href="#" data-section="financialCalculatorSection" data-en="Financial Calculator"
+                data-hi="वित्तीय कैलकुलेटर">
+                Financial Calculator
+            </a>
+
+            <a href="#" data-section="loanComparisonSection" data-en="Loan Comparison" data-hi="ऋण तुलना">
+                Loan Comparison
+            </a>
+
+            <a href="#" data-section="helpSection" data-en="Help & Information" data-hi="सहायता एवं जानकारी">
+                Help &amp; Information
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HOME
+        ================================================== -->
+
+        <section id="homeSection" class="page-section hero-section">
+
+            <div class="page-container">
+
+                <div class="service-label" data-en="UDYAMAI SERVICES" data-hi="उद्यमAI सेवाएँ">
+                    UDYAMAI SERVICES
+                </div>
+
+
+                <h2 data-en="Government Scheme Assistance" data-hi="सरकारी योजना सहायता">
+                    Government Scheme Assistance
+                </h2>
+
+
+                <p class="hero-description"
+                    data-en="A student-built prototype for exploring government scheme records and estimating loan repayment values for entrepreneurs."
+                    data-hi="उद्यमियों के लिए सरकारी योजना रिकॉर्ड देखने और ऋण पुनर्भुगतान का अनुमान लगाने हेतु छात्र द्वारा बनाया गया प्रोटोटाइप।">
+                    A student-built prototype for exploring government
+                    scheme records and estimating loan repayment values
+                    for entrepreneurs.
+                </p>
+
+
+                <div class="home-grid">
+
+
+                    <!-- HOME CARD 1 -->
+
+                    <div class="home-card">
+
+                        <div class="home-card-number">
+                            01
+                        </div>
+
+                        <h3 data-en="Scheme Matching" data-hi="योजना मिलान">
+                            Scheme Matching
+                        </h3>
+
+                        <p data-en="Enter basic beneficiary details to identify matching scheme records from the supplied scheme dataset."
+                            data-hi="दिए गए योजना डेटासेट से मिलान करने वाली योजना रिकॉर्ड खोजने के लिए लाभार्थी की मूल जानकारी दर्ज करें।">
+                            Enter basic beneficiary details to identify
+                            matching scheme records from the supplied
+                            scheme dataset.
+                        </p>
+
+                        <button type="button" class="btn-primary home-action" data-target="schemeMatchingSection"
+                            data-en="Find Schemes" data-hi="योजनाएँ खोजें">
+                            Find Schemes
+                        </button>
+
+                    </div>
+
+
+                    <!-- HOME CARD 2 -->
+
+                    <div class="home-card">
+
+                        <div class="home-card-number">
+                            02
+                        </div>
+
+                        <h3 data-en="Financial Calculator" data-hi="वित्तीय कैलकुलेटर">
+                            Financial Calculator
+                        </h3>
+
+                        <p data-en="Estimate monthly EMI, total interest and total repayment for entered loan details."
+                            data-hi="दर्ज ऋण विवरण के आधार पर मासिक EMI, कुल ब्याज और कुल पुनर्भुगतान का अनुमान लगाएँ।">
+                            Estimate monthly EMI, total interest and
+                            total repayment for entered loan details.
+                        </p>
+
+                        <button type="button" class="btn-primary home-action" data-target="financialCalculatorSection"
+                            data-en="Open Calculator" data-hi="कैलकुलेटर खोलें">
+                            Open Calculator
+                        </button>
+
+                    </div>
+
+
+                    <!-- HOME CARD 3 -->
+
+                    <div class="home-card">
+
+                        <div class="home-card-number">
+                            03
+                        </div>
+
+                        <h3 data-en="Loan Comparison" data-hi="ऋण तुलना">
+                            Loan Comparison
+                        </h3>
+
+                        <p data-en="Enter a second loan option and compare the calculated repayment values."
+                            data-hi="दूसरे ऋण विकल्प का विवरण दर्ज करके पुनर्भुगतान मूल्यों की तुलना करें।">
+                            Enter a second loan option and compare
+                            the calculated repayment values.
+                        </p>
+
+                        <button type="button" class="btn-primary home-action" data-target="loanComparisonSection"
+                            data-en="Compare Loans" data-hi="ऋणों की तुलना करें">
+                            Compare Loans
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home-notice">
+
+                    <strong data-en="Prototype Information" data-hi="प्रोटोटाइप जानकारी">
+                        Prototype Information
+                    </strong>
+
+                    <p data-en="Scheme information shown in this prototype is based on the supplied SIH scheme reference data. Fields marked as not specified are not assumed or invented."
+                        data-hi="इस प्रोटोटाइप में दिखाई गई योजना जानकारी उपलब्ध कराए गए SIH योजना संदर्भ डेटा पर आधारित है। 'Not specified' वाले क्षेत्रों के लिए कोई मान अनुमानित या बनाया नहीं गया है।">
+                        Scheme information shown in this prototype is based
+                        on the supplied SIH scheme reference data. Fields
+                        marked as not specified are not assumed or invented.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SCHEME MATCHING
+        ================================================== -->
+
+        <section id="schemeMatchingSection" class="page-section" style="display:none;">
+
+            <div class="page-container">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <span class="section-number">
+                            01
+                        </span>
+
+                        <h2 data-en="Scheme Matching" data-hi="योजना मिलान">
+                            Scheme Matching
+                        </h2>
+
+                    </div>
+
+                    <p data-en="Enter basic details to identify scheme records matching the selected beneficiary group."
+                        data-hi="चयनित लाभार्थी समूह से संबंधित योजना रिकॉर्ड खोजने के लिए मूल जानकारी दर्ज करें।">
+                        Enter basic details to identify scheme records
+                        matching the selected beneficiary group.
+                    </p>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <div class="form-grid">
+
+
+                        <!-- PROJECT TYPE -->
+
+                        <div class="form-group">
+
+                            <label for="projectType" data-en="PROJECT TYPE" data-hi="परियोजना का प्रकार">
+                                PROJECT TYPE
+                            </label>
+
+                            <select id="projectType">
+
+                                <option value="" data-en="Select project type" data-hi="परियोजना का प्रकार चुनें">
+                                    Select project type
+                                </option>
+
+                                <option value="Business" data-en="Business" data-hi="व्यवसाय">
+                                    Business
+                                </option>
+
+                                <option value="Self Employment" data-en="Self Employment" data-hi="स्वरोजगार">
+                                    Self Employment
+                                </option>
+
+                                <option value="Agriculture" data-en="Agriculture" data-hi="कृषि">
+                                    Agriculture
+                                </option>
+
+                                <option value="Professional" data-en="Professional" data-hi="पेशेवर">
+                                    Professional
+                                </option>
+
+                                <option value="Artisan / Craft" data-en="Artisan / Craft" data-hi="कारीगर / हस्तशिल्प">
+                                    Artisan / Craft
+                                </option>
+
+                                <option value="Other" data-en="Other" data-hi="अन्य">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- PROJECT COST -->
+
+                        <div class="form-group">
+
+                            <label for="projectCost" data-en="ESTIMATED PROJECT COST (₹)"
+                                data-hi="अनुमानित परियोजना लागत (₹)">
+                                ESTIMATED PROJECT COST (₹)
+                            </label>
+
+                            <input type="number" id="projectCost" placeholder="Enter amount"
+                                data-placeholder-en="Enter amount" data-placeholder-hi="राशि दर्ज करें" min="1"
+                                step="1">
+
+                        </div>
+
+
+                        <!-- TARGET GROUP -->
+
+                        <div class="form-group">
+
+                            <label for="targetGroup" data-en="TARGET BENEFICIARY GROUP" data-hi="लक्षित लाभार्थी समूह">
+                                TARGET BENEFICIARY GROUP
+                            </label>
+
+                            <select id="targetGroup">
+
+                                <option value="" data-en="Select beneficiary group" data-hi="लाभार्थी समूह चुनें">
+                                    Select beneficiary group
+                                </option>
+
+                                <option value="Scheduled Castes" data-en="Scheduled Castes" data-hi="अनुसूचित जाति">
+                                    Scheduled Castes
+                                </option>
+
+                                <option value="SC" data-en="SC" data-hi="अनुसूचित जाति">
+                                    SC
+                                </option>
+
+                                <option value="SC women" data-en="SC women" data-hi="अनुसूचित जाति की महिलाएँ">
+                                    SC women
+                                </option>
+
+                                <option value="SC women farmers" data-en="SC women farmers"
+                                    data-hi="अनुसूचित जाति की महिला किसान">
+                                    SC women farmers
+                                </option>
+
+                                <option value="SC students" data-en="SC students" data-hi="अनुसूचित जाति के विद्यार्थी">
+                                    SC students
+                                </option>
+
+                                <option value="OBC / Backward Classes" data-en="OBC / Backward Classes"
+                                    data-hi="OBC / पिछड़ा वर्ग">
+                                    OBC / Backward Classes
+                                </option>
+
+                                <option value="OBC women" data-en="OBC women" data-hi="OBC महिलाएँ">
+                                    OBC women
+                                </option>
+
+                                <option value="Young OBC professionals" data-en="Young OBC professionals"
+                                    data-hi="युवा OBC पेशेवर">
+                                    Young OBC professionals
+                                </option>
+
+                                <option value="OBC artisans / craftspersons" data-en="OBC artisans / craftspersons"
+                                    data-hi="OBC कारीगर / शिल्पकार">
+                                    OBC artisans / craftspersons
+                                </option>
+
+                                <option value="Religious minorities" data-en="Religious minorities"
+                                    data-hi="धार्मिक अल्पसंख्यक">
+                                    Religious minorities
+                                </option>
+
+                                <option value="ST women" data-en="ST women" data-hi="अनुसूचित जनजाति की महिलाएँ">
+                                    ST women
+                                </option>
+
+                                <option value="Safai Karamcharis / Dependents" data-en="Safai Karamcharis / Dependents"
+                                    data-hi="सफाई कर्मचारी / आश्रित">
+                                    Safai Karamcharis / Dependents
+                                </option>
+
+                                <option value="SC/ST and women entrepreneurs" data-en="SC/ST and women entrepreneurs"
+                                    data-hi="SC/ST एवं महिला उद्यमी">
+                                    SC/ST and women entrepreneurs
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- INCOME -->
+
+                        <div class="form-group">
+
+                            <label for="incomeLevel" data-en="INCOME LEVEL" data-hi="आय स्तर">
+                                INCOME LEVEL
+                            </label>
+
+                            <select id="incomeLevel">
+
+                                <option value="" data-en="Select income level" data-hi="आय स्तर चुनें">
+                                    Select income level
+                                </option>
+
+                                <option value="Low" data-en="Low" data-hi="कम">
+                                    Low
+                                </option>
+
+                                <option value="Middle" data-en="Middle" data-hi="मध्यम">
+                                    Middle
+                                </option>
+
+                                <option value="High" data-en="High" data-hi="उच्च">
+                                    High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- EDUCATION -->
+
+                        <div class="form-group">
+
+                            <label for="educationStatus" data-en="EDUCATION STATUS" data-hi="शैक्षणिक स्थिति">
+                                EDUCATION STATUS
+                            </label>
+
+                            <select id="educationStatus">
+
+                                <option value="" data-en="Select education status" data-hi="शैक्षणिक स्थिति चुनें">
+                                    Select education status
+                                </option>
+
+                                <option value="School" data-en="School" data-hi="स्कूल">
+                                    School
+                                </option>
+
+                                <option value="Graduate" data-en="Graduate" data-hi="स्नातक">
+                                    Graduate
+                                </option>
+
+                                <option value="Post Graduate" data-en="Post Graduate" data-hi="स्नातकोत्तर">
+                                    Post Graduate
+                                </option>
+
+                                <option value="Vocational" data-en="Vocational" data-hi="व्यावसायिक">
+                                    Vocational
+                                </option>
+
+                                <option value="Other" data-en="Other" data-hi="अन्य">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button type="button" id="findSchemeButton" class="btn-primary" data-en="Find Suitable Schemes"
+                            data-hi="उपयुक्त योजनाएँ खोजें">
+                            Find Suitable Schemes
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULTS -->
+
+                <div id="schemeResults" class="scheme-results" style="display:none;">
+
+                    <div id="schemeResultMessage" class="result-message">
+                    </div>
+
+                    <div id="schemeCards" class="scheme-cards">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINANCIAL CALCULATOR
+        ================================================== -->
+
+        <section id="financialCalculatorSection" class="page-section" style="display:none;">
+
+            <div class="page-container">
+
+                <div class="service-label" data-en="FINANCIAL SERVICES" data-hi="वित्तीय सेवाएँ">
+                    FINANCIAL SERVICES
+                </div>
+
+
+                <h2 data-en="Financial Calculator" data-hi="वित्तीय कैलकुलेटर">
+                    Financial Calculator
+                </h2>
+
+
+                <p class="section-description"
+                    data-en="Calculate estimated monthly EMI, total interest and total repayment for a loan."
+                    data-hi="ऋण के लिए अनुमानित मासिक EMI, कुल ब्याज और कुल पुनर्भुगतान की गणना करें।">
+                    Calculate estimated monthly EMI, total interest
+                    and total repayment for a loan.
+                </p>
+
+
+                <!-- STEPS -->
+
+                <div class="step-container">
+
+                    <div class="step active">
+
+                        <span class="step-number">
+                            1
+                        </span>
+
+                        <div>
+
+                            <small data-en="STEP 1" data-hi="चरण 1">
+                                STEP 1
+                            </small>
+
+                            <strong data-en="Loan Details" data-hi="ऋण विवरण">
+                                Loan Details
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step-line"></div>
+
+
+                    <div class="step">
+
+                        <span class="step-number">
+                            2
+                        </span>
+
+                        <div>
+
+                            <small data-en="STEP 2" data-hi="चरण 2">
+                                STEP 2
+                            </small>
+
+                            <strong data-en="Calculation" data-hi="गणना">
+                                Calculation
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step-line"></div>
+
+
+                    <div class="step">
+
+                        <span class="step-number">
+                            3
+                        </span>
+
+                        <div>
+
+                            <small data-en="STEP 3" data-hi="चरण 3">
+                                STEP 3
+                            </small>
+
+                            <strong data-en="Results" data-hi="परिणाम">
+                                Results
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INPUT CARD -->
+
+                <div class="form-card">
+
+                    <div class="section-mini-title" data-en="Loan Details" data-hi="ऋण विवरण">
+                        Loan Details
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="loanAmount" data-en="LOAN AMOUNT (₹)" data-hi="ऋण राशि (₹)">
+                                LOAN AMOUNT (₹)
+                            </label>
+
+                            <input type="number" id="loanAmount" placeholder="Enter loan amount"
+                                data-placeholder-en="Enter loan amount" data-placeholder-hi="ऋण राशि दर्ज करें" min="1"
+                                step="1">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="annualRate" data-en="ANNUAL INTEREST RATE (%)" data-hi="वार्षिक ब्याज दर (%)">
+                                ANNUAL INTEREST RATE (%)
+                            </label>
+
+                            <input type="number" id="annualRate" placeholder="Example: 8.5"
+                                data-placeholder-en="Example: 8.5" data-placeholder-hi="उदाहरण: 8.5" min="0" max="100"
+                                step="0.01">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="years" data-en="LOAN TENURE (YEARS)" data-hi="ऋण अवधि (वर्ष)">
+                                LOAN TENURE (YEARS)
+                            </label>
+
+                            <input type="number" id="years" placeholder="Example: 5" data-placeholder-en="Example: 5"
+                                data-placeholder-hi="उदाहरण: 5" min="1" max="30" step="1">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="monthlyIncome" data-en="MONTHLY BUSINESS INCOME (₹)"
+                                data-hi="मासिक व्यावसायिक आय (₹)">
+                                MONTHLY BUSINESS INCOME (₹)
+                            </label>
+
+                            <input type="number" id="monthlyIncome" placeholder="Enter monthly income"
+                                data-placeholder-en="Enter monthly income" data-placeholder-hi="मासिक आय दर्ज करें"
+                                min="1" step="1">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button type="button" class="btn-primary" onclick="calculateEMI()" data-en="Calculate EMI"
+                            data-hi="EMI की गणना करें">
+                            Calculate EMI
+                        </button>
+
+
+                        <button type="button" class="btn-secondary" onclick="resetCalculator()" data-en="Reset"
+                            data-hi="रीसेट">
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULTS -->
+
+                <div class="results-panel">
+
+                    <div class="section-mini-title" data-en="Calculation Results" data-hi="गणना परिणाम">
+                        Calculation Results
+                    </div>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <span data-en="MONTHLY EMI" data-hi="मासिक EMI">
+                                MONTHLY EMI
+                            </span>
+
+                            <strong id="emi">
+                                ₹0.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span data-en="TOTAL INTEREST" data-hi="कुल ब्याज">
+                                TOTAL INTEREST
+                            </span>
+
+                            <strong id="totalInterest">
+                                ₹0.00
+                            </strong>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <span data-en="TOTAL REPAYMENT" data-hi="कुल पुनर्भुगतान">
+                                TOTAL REPAYMENT
+                            </span>
+
+                            <strong id="totalPayment">
+                                ₹0.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REPAYMENT INSIGHT -->
+
+                <div class="info-panel">
+
+                    <div class="section-mini-title" data-en="Repayment Insight" data-hi="पुनर्भुगतान जानकारी">
+                        Repayment Insight
+                    </div>
+
+
+                    <p id="insightText"
+                        data-en="Enter your loan details above to estimate your monthly repayment and total interest."
+                        data-hi="मासिक पुनर्भुगतान और कुल ब्याज का अनुमान लगाने के लिए ऊपर ऋण विवरण दर्ज करें।">
+                        Enter your loan details above to estimate
+                        your monthly repayment and total interest.
+                    </p>
+
+
+                    <div class="ratio-row">
+
+                        <strong data-en="EMI / Monthly Income" data-hi="EMI / मासिक आय">
+                            EMI / Monthly Income
+                        </strong>
+
+                        <span id="ratioValue">
+                            0%
+                        </span>
+
+                    </div>
+
+
+                    <div class="ratio-bar">
+
+                        <div id="ratioFill" class="ratio-fill">
+                        </div>
+
+                    </div>
+
+
+                    <p id="ratioStatus" class="small-note" data-en="Enter your details to see your repayment ratio."
+                        data-hi="पुनर्भुगतान अनुपात देखने के लिए अपना विवरण दर्ज करें।">
+                        Enter your details to see your repayment ratio.
+                    </p>
+
+                </div>
+
+
+                <!-- AFFORDABILITY -->
+
+                <div class="info-panel">
+
+                    <div class="section-mini-title" data-en="Income Affordability View" data-hi="आय वहनीयता विवरण">
+                        Income Affordability View
+                    </div>
+
+
+                    <div class="affordability-grid">
+
+                        <div>
+
+                            <span data-en="MONTHLY INCOME" data-hi="मासिक आय">
+                                MONTHLY INCOME
+                            </span>
+
+                            <strong id="affordIncome">
+                                ₹0.00
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span data-en="ESTIMATED EMI" data-hi="अनुमानित EMI">
+                                ESTIMATED EMI
+                            </span>
+
+                            <strong id="affordEMI">
+                                ₹0.00
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span data-en="REMAINING INCOME" data-hi="शेष आय">
+                                REMAINING INCOME
+                            </span>
+
+                            <strong id="remainingIncome">
+                                ₹0.00
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="affordabilityStatus" class="status-message"
+                        data-en="Enter your details to check affordability."
+                        data-hi="वहनीयता देखने के लिए अपना विवरण दर्ज करें।">
+                        Enter your details to check affordability.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LOAN COMPARISON
+        ================================================== -->
+
+        <section id="loanComparisonSection" class="page-section" style="display:none;">
+
+            <div class="page-container">
+
+                <div class="service-label" data-en="FINANCIAL SERVICES" data-hi="वित्तीय सेवाएँ">
+                    FINANCIAL SERVICES
+                </div>
+
+
+                <h2 data-en="Loan Comparison" data-hi="ऋण तुलना">
+                    Loan Comparison
+                </h2>
+
+
+                <p class="section-description" data-en="Compare the repayment values of two entered loan options."
+                    data-hi="दो दर्ज किए गए ऋण विकल्पों के पुनर्भुगतान मूल्यों की तुलना करें।">
+                    Compare the repayment values of two entered
+                    loan options.
+                </p>
+
+
+                <div class="form-card">
+
+                    <div class="section-mini-title" data-en="Alternative Loan Details" data-hi="वैकल्पिक ऋण विवरण">
+                        Alternative Loan Details
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="form-group">
+
+                            <label for="compareAmount" data-en="ALTERNATIVE LOAN AMOUNT (₹)"
+                                data-hi="वैकल्पिक ऋण राशि (₹)">
+                                ALTERNATIVE LOAN AMOUNT (₹)
+                            </label>
+
+                            <input type="number" id="compareAmount" placeholder="Enter amount"
+                                data-placeholder-en="Enter amount" data-placeholder-hi="राशि दर्ज करें" min="1"
+                                step="1">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="compareRate" data-en="ALTERNATIVE INTEREST RATE (%)"
+                                data-hi="वैकल्पिक ब्याज दर (%)">
+                                ALTERNATIVE INTEREST RATE (%)
+                            </label>
+
+                            <input type="number" id="compareRate" placeholder="Example: 10"
+                                data-placeholder-en="Example: 10" data-placeholder-hi="उदाहरण: 10" min="0" max="100"
+                                step="0.01">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="compareYears" data-en="ALTERNATIVE TENURE (YEARS)"
+                                data-hi="वैकल्पिक अवधि (वर्ष)">
+                                ALTERNATIVE TENURE (YEARS)
+                            </label>
+
+                            <input type="number" id="compareYears" placeholder="Example: 5"
+                                data-placeholder-en="Example: 5" data-placeholder-hi="उदाहरण: 5" min="1" max="30"
+                                step="1">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button type="button" class="btn-primary" onclick="compareLoans()" data-en="Compare Loans"
+                            data-hi="ऋणों की तुलना करें">
+                            Compare Loans
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="comparison-results" style="display:none;">
+
+                    <div class="section-mini-title" data-en="Comparison Results" data-hi="तुलना परिणाम">
+                        Comparison Results
+                    </div>
+
+
+                    <div class="comparison-table-wrapper">
+
+                        <table class="comparison-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th data-en="Particular" data-hi="विवरण">
+                                        Particular
+                                    </th>
+
+                                    <th data-en="Current Loan" data-hi="वर्तमान ऋण">
+                                        Current Loan
+                                    </th>
+
+                                    <th data-en="Alternative Loan" data-hi="वैकल्पिक ऋण">
+                                        Alternative Loan
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td data-en="Monthly EMI" data-hi="मासिक EMI">
+                                        Monthly EMI
+                                    </td>
+
+                                    <td id="currentCompareEMI">
+                                        ₹0.00
+                                    </td>
+
+                                    <td id="alternativeEMI">
+                                        ₹0.00
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td data-en="Total Interest" data-hi="कुल ब्याज">
+                                        Total Interest
+                                    </td>
+
+                                    <td id="currentCompareInterest">
+                                        ₹0.00
+                                    </td>
+
+                                    <td id="alternativeInterest">
+                                        ₹0.00
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td data-en="Total Repayment" data-hi="कुल पुनर्भुगतान">
+                                        Total Repayment
+                                    </td>
+
+                                    <td id="currentComparePayment">
+                                        ₹0.00
+                                    </td>
+
+                                    <td id="alternativePayment">
+                                        ₹0.00
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div id="comparisonSummary" class="comparison-summary"
+                        data-en="Enter both loan options to compare them."
+                        data-hi="तुलना करने के लिए दोनों ऋण विकल्प दर्ज करें।">
+                        Enter both loan options to compare them.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HELP & INFORMATION
+        ================================================== -->
+
+        <section id="helpSection" class="page-section" style="display:none;">
+
+            <div class="page-container">
+
+                <div class="service-label" data-en="INFORMATION" data-hi="जानकारी">
+                    INFORMATION
+                </div>
+
+
+                <h2 data-en="Help & Information" data-hi="सहायता एवं जानकारी">
+                    Help &amp; Information
+                </h2>
+
+
+                <p class="section-description"
+                    data-en="Important information about this prototype and its calculations."
+                    data-hi="इस प्रोटोटाइप और इसकी गणनाओं से संबंधित महत्वपूर्ण जानकारी।">
+                    Important information about this prototype
+                    and its calculations.
+                </p>
+
+
+                <div class="information-card">
+
+
+                    <div class="information-item">
+
+                        <h3 data-en="Scheme Data" data-hi="योजना डेटा">
+                            Scheme Data
+                        </h3>
+
+                        <p data-en="Scheme information displayed by the prototype comes from the supplied SIH scheme reference data."
+                            data-hi="प्रोटोटाइप में दिखाई गई योजना जानकारी उपलब्ध कराए गए SIH योजना संदर्भ डेटा से ली गई है।">
+                            Scheme information displayed by the prototype
+                            comes from the supplied SIH scheme reference data.
+                        </p>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <h3 data-en="Financial Calculator" data-hi="वित्तीय कैलकुलेटर">
+                            Financial Calculator
+                        </h3>
+
+                        <p data-en="EMI, total interest and total repayment are calculated from the loan amount, annual interest rate and tenure entered by the user."
+                            data-hi="EMI, कुल ब्याज और कुल पुनर्भुगतान की गणना उपयोगकर्ता द्वारा दर्ज ऋण राशि, वार्षिक ब्याज दर और अवधि से की जाती है।">
+                            EMI, total interest and total repayment are
+                            calculated from the loan amount, annual interest
+                            rate and tenure entered by the user.
+                        </p>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <h3 data-en="Unspecified Values" data-hi="निर्दिष्ट नहीं किए गए मान">
+                            Unspecified Values
+                        </h3>
+
+                        <p data-en="Where the supplied scheme reference does not specify an interest rate, loan limit or repayment tenure, the prototype displays Not specified rather than assuming a value."
+                            data-hi="जहाँ उपलब्ध योजना संदर्भ में ब्याज दर, ऋण सीमा या पुनर्भुगतान अवधि निर्दिष्ट नहीं है, वहाँ प्रोटोटाइप कोई मान मानने के बजाय Not specified दिखाता है।">
+                            Where the supplied scheme reference does not specify
+                            an interest rate, loan limit or repayment tenure,
+                            the prototype displays Not specified rather than
+                            assuming a value.
+                        </p>
+
+                    </div>
+
+
+                    <div class="information-item">
+
+                        <h3 data-en="Important Note" data-hi="महत्वपूर्ण सूचना">
+                            Important Note
+                        </h3>
+
+                        <p data-en="Calculator outputs are estimates based on the values entered by the user. They are not an official sanction, approval or eligibility decision."
+                            data-hi="कैलकुलेटर के परिणाम उपयोगकर्ता द्वारा दर्ज मानों पर आधारित अनुमान हैं। ये किसी आधिकारिक स्वीकृति, अनुमोदन या पात्रता का निर्णय नहीं हैं।">
+                            Calculator outputs are estimates based on the
+                            values entered by the user. They are not an
+                            official sanction, approval or eligibility decision.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div>
+
+            <strong>
+                UdyamAI
+            </strong>
+
+            <span data-en="Financial Assistance Prototype" data-hi="वित्तीय सहायता प्रोटोटाइप">
+                Financial Assistance Prototype
+            </span>
+
+        </div>
+
+        <div>
+            SIH 2026 • SIH26092
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const navLinks =
+                    document.querySelectorAll(
+                        ".main-nav a"
+                    );
+
+                const sections =
+                    document.querySelectorAll(
+                        ".page-section"
+                    );
+
+
+                function showSection(sectionId) {
+
+                    sections.forEach(
+                        function (section) {
+
+                            section.style.display = "none";
+
+                        }
+                    );
+
+
+                    const selected =
+                        document.getElementById(
+                            sectionId
+                        );
+
+
+                    if (selected) {
+
+                        selected.style.display = "block";
+
+                    }
+
+
+                    navLinks.forEach(
+                        function (link) {
+
+                            link.classList.remove("active");
+
+                            if (
+                                link.dataset.section ===
+                                sectionId
+                            ) {
+
+                                link.classList.add("active");
+
+                            }
+
+                        }
+                    );
+
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }
+
+
+                navLinks.forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                showSection(
+                                    this.dataset.section
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                document
+                    .querySelectorAll(".home-action")
+                    .forEach(
+                        function (button) {
+
+                            button.addEventListener(
+                                "click",
+                                function () {
+
+                                    showSection(
+                                        this.dataset.target
+                                    );
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+                showSection("homeSection");
+
+            }
+        );
+
+    </script>
+
+
+
+    <!-- =====================================================
+         HINDI / ENGLISH TOGGLE
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const languageButton =
+                    document.getElementById(
+                        "languageToggle"
+                    );
+
+
+                if (!languageButton) return;
+
+
+                let hindiMode = false;
+
+
+                function updateLanguage() {
+
+                    const elements =
+                        document.querySelectorAll(
+                            "[data-en][data-hi]"
+                        );
+
+
+                    elements.forEach(
+                        function (element) {
+
+                            element.textContent =
+                                hindiMode
+                                    ? element.dataset.hi
+                                    : element.dataset.en;
+
+                        }
+                    );
+
+
+                    /* Input placeholders */
+
+                    document
+                        .querySelectorAll(
+                            "[data-placeholder-en][data-placeholder-hi]"
+                        )
+                        .forEach(
+                            function (input) {
+
+                                input.placeholder =
+                                    hindiMode
+                                        ? input.dataset.placeholderHi
+                                        : input.dataset.placeholderEn;
+
+                            }
+                        );
+
+
+                    /* Select options */
+
+                    document
+                        .querySelectorAll(
+                            "option[data-en][data-hi]"
+                        )
+                        .forEach(
+                            function (option) {
+
+                                option.textContent =
+                                    hindiMode
+                                        ? option.dataset.hi
+                                        : option.dataset.en;
+
+                            }
+                        );
+
+
+                    document.documentElement.lang =
+                        hindiMode ? "hi" : "en";
+
+
+                    languageButton.textContent =
+                        hindiMode
+                            ? "English"
+                            : "हिन्दी";
+
+
+                    /*
+                     * Keep selected values unchanged.
+                     * This is important because script.js
+                     * uses the English values internally.
+                     */
+
+                }
+
+
+                languageButton.addEventListener(
+                    "click",
+                    function () {
+
+                        hindiMode =
+                            !hindiMode;
+
+                        updateLanguage();
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+
+    <!-- =====================================================
+         MAIN JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

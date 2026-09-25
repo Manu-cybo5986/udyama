@@ -1,0 +1,1099 @@
+/* =========================================================
+   UDYAMAI FINANCIAL CALCULATOR STYLES
+   SIH 2026 | SIH26092
+   Scoped for Next.js / React
+   Converted from efinancial/style.css
+========================================================= */
+
+.financial-portal {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+  color: #142a52;
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.financial-portal *,
+.financial-portal *::before,
+.financial-portal *::after {
+  box-sizing: border-box;
+}
+
+.financial-portal a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.financial-portal button,
+.financial-portal input,
+.financial-portal select {
+  font-family: inherit;
+}
+
+.financial-portal button {
+  cursor: pointer;
+}
+
+/* =========================================================
+   GOVERNMENT TOP BAR
+========================================================= */
+
+.financial-portal .gov-bar {
+  min-height: 46px;
+  background: #11172f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  border-bottom: 1px solid #0b1024;
+}
+
+.financial-portal .gov-left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+}
+
+.financial-portal .gov-dot {
+  width: 9px;
+  height: 9px;
+  background: #f28c00;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.financial-portal .gov-divider {
+  opacity: 0.65;
+}
+
+.financial-portal .gov-right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.financial-portal .gov-right button {
+  min-width: 35px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #66708e;
+  border-radius: 3px;
+  background: #17203d;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.financial-portal .gov-right button:hover {
+  background: #263354;
+}
+
+/* =========================================================
+   MAIN HEADER
+========================================================= */
+
+.financial-portal .main-header {
+  min-height: 138px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 4%;
+  position: relative;
+}
+
+/* Tricolor bottom line */
+.financial-portal .main-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    #f28c00 0%,
+    #f28c00 34%,
+    #ffffff 34%,
+    #ffffff 68%,
+    #3d7d45 68%,
+    #3d7d45 100%
+  );
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.financial-portal .brand-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.financial-portal .brand-emblem {
+  width: 60px;
+  height: 60px;
+  background: #172354;
+  color: #f4a000;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  border: 1px solid #253363;
+}
+
+.financial-portal .brand-text h1 {
+  font-size: 31px;
+  line-height: 1.1;
+  color: #172354;
+  margin: 0;
+}
+
+.financial-portal .brand-text h1 span {
+  color: #ed8a00;
+}
+
+.financial-portal .brand-tag {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 3px 9px;
+  background: #e9edf7;
+  color: #172354;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.financial-portal .brand-text p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #4c648b;
+  font-size: 15px;
+}
+
+/* =========================================================
+   HEADER INFORMATION
+========================================================= */
+
+.financial-portal .header-information {
+  max-width: 390px;
+  padding-left: 20px;
+  border-left: 4px solid #273a78;
+}
+
+.financial-portal .header-information strong {
+  display: block;
+  font-size: 15px;
+  color: #172354;
+}
+
+.financial-portal .header-information p {
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #50688d;
+  font-size: 13px;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.financial-portal .main-nav {
+  background: #ffffff;
+  border-bottom: 1px solid #d8dee8;
+}
+
+.financial-portal .nav-inner {
+  width: 92%;
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.financial-portal .main-nav button.nav-link {
+  min-height: 58px;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #172957;
+  border: none;
+  background: transparent;
+  border-right: 1px solid #e1e5ec;
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.financial-portal .main-nav button.nav-link:first-child {
+  border-left: 1px solid #e1e5ec;
+}
+
+.financial-portal .main-nav button.nav-link:hover {
+  background: #f1f4f9;
+}
+
+.financial-portal .main-nav button.nav-link.active {
+  background: #f4f6fa;
+}
+
+.financial-portal .main-nav button.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+  right: 18px;
+  height: 4px;
+  background: #e88900;
+}
+
+/* =========================================================
+   PAGE SECTIONS
+========================================================= */
+
+.financial-portal .page-section {
+  min-height: 500px;
+  padding: 52px 0 65px;
+  flex: 1;
+}
+
+.financial-portal .page-container {
+  width: 92%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SERVICE LABEL
+========================================================= */
+
+.financial-portal .service-label {
+  color: #e27d00;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+.financial-portal .page-section h2 {
+  color: #172957;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.financial-portal .section-description,
+.financial-portal .hero-description {
+  color: #506a91;
+  font-size: 17px;
+  max-width: 850px;
+  margin-bottom: 30px;
+}
+
+/* =========================================================
+   HOME
+========================================================= */
+
+.financial-portal .hero-section {
+  padding-top: 55px;
+}
+
+.financial-portal .home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.financial-portal .home-card {
+  background: #ffffff;
+  border: 1px solid #d7dee9;
+  border-top: 4px solid #273b78;
+  padding: 25px;
+  min-height: 235px;
+  box-shadow: 0 2px 7px rgba(25, 44, 80, 0.05);
+}
+
+.financial-portal .home-card-number {
+  color: #e27d00;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.financial-portal .home-card h3 {
+  color: #172957;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.financial-portal .home-card p {
+  color: #526a90;
+  font-size: 14px;
+  min-height: 68px;
+  margin-bottom: 18px;
+}
+
+.financial-portal .home-notice {
+  margin-top: 25px;
+  background: #ffffff;
+  border: 1px solid #d7dee9;
+  border-left: 4px solid #e88900;
+  padding: 18px 20px;
+}
+
+.financial-portal .home-notice strong {
+  display: block;
+  color: #172957;
+  margin-bottom: 5px;
+}
+
+.financial-portal .home-notice p {
+  color: #526a90;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.financial-portal .section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 25px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d5dce7;
+}
+
+.financial-portal .section-header > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.financial-portal .section-header h2 {
+  margin: 0;
+}
+
+.financial-portal .section-header p {
+  max-width: 560px;
+  color: #607799;
+  font-size: 14px;
+  text-align: right;
+  margin: 0;
+}
+
+.financial-portal .section-number {
+  color: #e27d00;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.financial-portal .form-card {
+  background: #ffffff;
+  border: 1px solid #d5dce7;
+  padding: 28px;
+  box-shadow: 0 2px 8px rgba(25, 44, 80, 0.04);
+}
+
+.financial-portal .section-mini-title {
+  color: #172957;
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #e0e5ed;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.financial-portal .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 28px;
+}
+
+.financial-portal .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.financial-portal .form-group label {
+  color: #172957;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.financial-portal .form-group input,
+.financial-portal .form-group select {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 15px;
+  background: #ffffff;
+  border: 1px solid #cbd4e2;
+  border-radius: 5px;
+  color: #1b3159;
+  font-size: 15px;
+  outline: none;
+}
+
+.financial-portal .form-group input:focus,
+.financial-portal .form-group select:focus {
+  border-color: #273b78;
+  box-shadow: 0 0 0 2px rgba(39, 59, 120, 0.1);
+}
+
+/* =========================================================
+   FORM BUTTONS
+========================================================= */
+
+.financial-portal .form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.financial-portal .btn-primary,
+.financial-portal .btn-secondary {
+  min-height: 46px;
+  padding: 0 22px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.financial-portal .btn-primary {
+  background: #26366f;
+  color: #ffffff;
+  border: 1px solid #26366f;
+}
+
+.financial-portal .btn-primary:hover {
+  background: #1d2c5e;
+}
+
+.financial-portal .btn-secondary {
+  background: #ffffff;
+  color: #26366f;
+  border: 1px solid #9aa8bd;
+}
+
+.financial-portal .btn-secondary:hover {
+  background: #f2f5f9;
+}
+
+/* =========================================================
+   SCHEME RESULTS
+========================================================= */
+
+.financial-portal .scheme-results {
+  margin-top: 25px;
+}
+
+.financial-portal .result-message {
+  margin-bottom: 18px;
+  color: #526b91;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.financial-portal .scheme-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.financial-portal .scheme-card {
+  background: #ffffff;
+  border: 1px solid #d5dce7;
+  border-left: 4px solid #273b78;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(25, 44, 80, 0.04);
+}
+
+.financial-portal .scheme-card h4 {
+  color: #172957;
+  font-size: 19px;
+  margin-bottom: 3px;
+  margin-top: 0;
+}
+
+.financial-portal .scheme-type {
+  color: #63799a;
+  font-size: 13px;
+}
+
+.financial-portal .scheme-card-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 18px;
+  border: 1px solid #e0e5ec;
+}
+
+.financial-portal .scheme-detail {
+  background: #fafbfd;
+  padding: 11px;
+}
+
+.financial-portal .detail-label {
+  display: block;
+  color: #71839e;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.financial-portal .scheme-detail strong {
+  color: #1a315b;
+  font-size: 13px;
+}
+
+.financial-portal .scheme-benefit {
+  margin-top: 16px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e5ec;
+}
+
+.financial-portal .scheme-benefit span {
+  color: #71839e;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.financial-portal .scheme-benefit p {
+  color: #526a8e;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.financial-portal .scheme-source {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e8ee;
+  color: #7b8ba3;
+  font-size: 11px;
+}
+
+/* =========================================================
+   STEP INDICATOR
+========================================================= */
+
+.financial-portal .step-container {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #d5dce7;
+  padding: 14px 18px;
+  margin-bottom: 25px;
+}
+
+.financial-portal .step {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  color: #607494;
+}
+
+.financial-portal .step.active {
+  border: 1px solid #273b78;
+  background: #f8f9fd;
+}
+
+.financial-portal .step-number {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6eaf2;
+  color: #26366f;
+  font-weight: 700;
+}
+
+.financial-portal .step.active .step-number {
+  background: #26366f;
+  color: #ffffff;
+}
+
+.financial-portal .step small {
+  display: block;
+  color: #697c99;
+  font-size: 10px;
+  margin-bottom: 2px;
+}
+
+.financial-portal .step strong {
+  display: block;
+  color: #172957;
+  font-size: 14px;
+}
+
+.financial-portal .step-line {
+  width: 40px;
+  height: 1px;
+  background: #cbd4e2;
+}
+
+/* =========================================================
+   CALCULATOR RESULTS
+========================================================= */
+
+.financial-portal .results-panel {
+  margin-top: 25px;
+  background: #ffffff;
+  border: 1px solid #d5dce7;
+  padding: 28px;
+}
+
+.financial-portal .result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.financial-portal .result-card {
+  background: #f8f9fc;
+  border: 1px solid #dce2eb;
+  padding: 20px;
+  border-top: 3px solid #273b78;
+}
+
+.financial-portal .result-card span {
+  display: block;
+  color: #71839d;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.financial-portal .result-card strong {
+  display: block;
+  color: #172957;
+  font-size: 24px;
+}
+
+/* =========================================================
+   INFORMATION PANELS
+========================================================= */
+
+.financial-portal .info-panel {
+  margin-top: 20px;
+  background: #ffffff;
+  border: 1px solid #d5dce7;
+  padding: 25px;
+}
+
+.financial-portal .info-panel > p {
+  color: #526a8e;
+  font-size: 14px;
+}
+
+/* =========================================================
+   REPAYMENT RATIO
+========================================================= */
+
+.financial-portal .ratio-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.financial-portal .ratio-row strong {
+  color: #26375f;
+  font-size: 14px;
+}
+
+.financial-portal .ratio-value {
+  color: #26366f;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.financial-portal .ratio-bar {
+  width: 100%;
+  height: 9px;
+  background: #e5e9ef;
+  margin-top: 9px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.financial-portal .ratio-fill {
+  height: 100%;
+  background: #273b78;
+  transition: width 0.3s ease;
+}
+
+.financial-portal .small-note {
+  margin-top: 9px;
+  color: #72849d;
+  font-size: 12px;
+}
+
+/* =========================================================
+   AFFORDABILITY
+========================================================= */
+
+.financial-portal .affordability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.financial-portal .affordability-grid > div {
+  background: #f8f9fc;
+  border: 1px solid #dce2eb;
+  padding: 18px;
+}
+
+.financial-portal .affordability-grid span {
+  display: block;
+  color: #71839d;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.financial-portal .affordability-grid strong {
+  color: #172957;
+  font-size: 19px;
+}
+
+.financial-portal .status-message {
+  margin-top: 18px;
+  padding: 13px 15px;
+  background: #f5f7fa;
+  border: 1px solid #d9e0e9;
+  color: #526a8e;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.financial-portal .status-message.affordable {
+  background: #eef9ef;
+  color: #237a20;
+  border-color: #c3e6cb;
+}
+
+.financial-portal .status-message.high-burden {
+  background: #fff5e8;
+  color: #a05a00;
+  border-color: #ffe8cc;
+}
+
+/* =========================================================
+   VALIDATION ERROR BANNER
+========================================================= */
+
+.financial-portal .validation-banner {
+  margin-top: 15px;
+  padding: 12px 16px;
+  background: #fff1f0;
+  border: 1px solid #ffccc7;
+  color: #cf1322;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   COMPARISON
+========================================================= */
+
+.financial-portal .comparison-results {
+  margin-top: 25px;
+  background: #ffffff;
+  border: 1px solid #d5dce7;
+  padding: 28px;
+}
+
+.financial-portal .comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+.financial-portal .comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #d6dde7;
+}
+
+.financial-portal .comparison-table th,
+.financial-portal .comparison-table td {
+  padding: 14px;
+  border: 1px solid #dce2ea;
+  text-align: left;
+}
+
+.financial-portal .comparison-table th {
+  background: #eef1f6;
+  color: #172957;
+  font-size: 13px;
+}
+
+.financial-portal .comparison-table td {
+  color: #4f678c;
+  font-size: 14px;
+}
+
+.financial-portal .comparison-table td:not(:first-child) {
+  font-weight: 700;
+  color: #263b69;
+}
+
+.financial-portal .comparison-summary {
+  margin-top: 18px;
+  padding: 16px;
+  background: #f6f8fb;
+  border-left: 4px solid #e88900;
+  color: #526a8e;
+  font-size: 13px;
+}
+
+/* =========================================================
+   HELP / INFORMATION
+========================================================= */
+
+.financial-portal .information-card {
+  background: #ffffff;
+  border: 1px solid #d5dce7;
+  padding: 5px;
+}
+
+.financial-portal .information-item {
+  padding: 23px 25px;
+  border-bottom: 1px solid #e0e5ec;
+}
+
+.financial-portal .information-item:last-child {
+  border-bottom: none;
+}
+
+.financial-portal .information-item h3 {
+  color: #172957;
+  font-size: 18px;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.financial-portal .information-item p {
+  color: #526a8e;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.financial-portal .site-footer {
+  min-height: 80px;
+  background: #11172f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 4%;
+  font-size: 13px;
+  margin-top: auto;
+}
+
+.financial-portal .site-footer strong {
+  margin-right: 12px;
+  color: #ffffff;
+}
+
+.financial-portal .site-footer span {
+  color: #b9c2d5;
+}
+
+.financial-portal .site-footer div:last-child {
+  color: #b9c2d5;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .financial-portal .main-header {
+    padding: 20px 3%;
+  }
+
+  .financial-portal .header-information {
+    max-width: 310px;
+  }
+
+  .financial-portal .nav-inner {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .financial-portal .main-nav button.nav-link {
+    white-space: nowrap;
+    padding: 0 18px;
+  }
+
+  .financial-portal .page-container {
+    width: 94%;
+  }
+
+  .financial-portal .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-portal .scheme-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-portal .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .financial-portal .section-header p {
+    text-align: left;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .financial-portal .gov-bar {
+    padding: 8px 3%;
+    align-items: flex-start;
+  }
+
+  .financial-portal .gov-left {
+    flex-wrap: wrap;
+    font-size: 11px;
+  }
+
+  .financial-portal .gov-right {
+    display: none;
+  }
+
+  .financial-portal .main-header {
+    min-height: auto;
+    padding: 20px 4%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .financial-portal .brand-emblem {
+    width: 52px;
+    height: 52px;
+  }
+
+  .financial-portal .brand-text h1 {
+    font-size: 27px;
+  }
+
+  .financial-portal .header-information {
+    width: 100%;
+    max-width: none;
+  }
+
+  .financial-portal .nav-inner {
+    overflow-x: auto;
+  }
+
+  .financial-portal .main-nav button.nav-link {
+    min-height: 52px;
+    padding: 0 15px;
+    font-size: 13px;
+  }
+
+  .financial-portal .page-section {
+    padding: 35px 0 45px;
+  }
+
+  .financial-portal .page-section h2 {
+    font-size: 28px;
+  }
+
+  .financial-portal .hero-description,
+  .financial-portal .section-description {
+    font-size: 15px;
+  }
+
+  .financial-portal .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-portal .scheme-card-details {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-portal .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-portal .affordability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .financial-portal .step-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .financial-portal .step-line {
+    width: 1px;
+    height: 15px;
+    margin-left: 27px;
+  }
+
+  .financial-portal .step {
+    flex: none;
+  }
+
+  .financial-portal .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .financial-portal * {
+    transition: none !important;
+  }
+}
