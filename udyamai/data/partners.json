@@ -6,9 +6,9 @@
       "geometry": { "type": "Point", "coordinates": [75.7873, 26.9124] },
       "properties": { 
         "id": 1,
-        "name": "Rajasthan State Channelizing Agency (Main)", 
+        "name": "Rajasthan State Channelizing Agency", 
         "category": "SCA", 
-        "region": "Rajasthan",
+        "state": "Rajasthan",
         "contact": "+91-141-2301000",
         "loanTypes": ["Micro Credit", "Self-Help Group Loans"],
         "hasHighNPA": false 
@@ -16,51 +16,12 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [75.8000, 26.8500] },
-      "properties": { 
-        "id": 2,
-        "name": "Malviya Nagar Regional Rural Bank", 
-        "category": "RRB", 
-        "region": "Rajasthan",
-        "contact": "+91-141-2745000",
-        "loanTypes": ["Agriculture Loan", "Kisan Credit Card"],
-        "hasHighNPA": true 
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [75.7994, 26.9197] },
-      "properties": { 
-        "id": 3,
-        "name": "HDFC Bank – MI Road", 
-        "category": "Bank", 
-        "region": "Rajasthan",
-        "contact": "+91-141-2987654",
-        "loanTypes": ["Personal Loan", "Home Loan", "MSME Loan"],
-        "hasHighNPA": false 
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [77.2090, 28.6139] },
-      "properties": { 
-        "id": 4,
-        "name": "Delhi State Finance Corporation", 
-        "category": "SCA", 
-        "region": "Delhi",
-        "contact": "+91-11-23345678",
-        "loanTypes": ["MSME Loan", "Startup Loan"],
-        "hasHighNPA": false 
-      }
-    },
-    {
-      "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [72.8777, 19.0760] },
       "properties": { 
-        "id": 5,
+        "id": 2,
         "name": "Maharashtra NBFC Headquarters", 
         "category": "NBFC", 
-        "region": "Maharashtra",
+        "state": "Maharashtra",
         "contact": "+91-22-24455667",
         "loanTypes": ["Business Loan", "Consumer Loan"],
         "hasHighNPA": false 
@@ -68,27 +29,66 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [76.9542, 11.0168] },
+      "geometry": { "type": "Point", "coordinates": [80.9462, 26.8467] },
       "properties": { 
-        "id": 6,
-        "name": "Coimbatore Rural Cooperative", 
+        "id": 3,
+        "name": "Uttar Pradesh Gramin Bank", 
         "category": "RRB", 
-        "region": "Tamil Nadu",
-        "contact": "+91-422-2345678",
-        "loanTypes": ["Agriculture Loan", "Self-Help Group Loans"],
+        "state": "Uttar Pradesh",
+        "contact": "+91-522-2556677",
+        "loanTypes": ["Kisan Credit Card", "Micro Loan"],
         "hasHighNPA": false 
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [80.9462, 26.8467] },
+      "geometry": { "type": "Point", "coordinates": [80.2707, 13.0827] },
+      "properties": { 
+        "id": 4,
+        "name": "Tamil Nadu State Cooperative", 
+        "category": "Bank", 
+        "state": "Tamil Nadu",
+        "contact": "+91-44-23456789",
+        "loanTypes": ["Agriculture Loan", "MSME Loan"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [88.3639, 22.5726] },
+      "properties": { 
+        "id": 5,
+        "name": "Bengal State Cooperative Bank", 
+        "category": "Bank", 
+        "state": "West Bengal",
+        "contact": "+91-33-22445566",
+        "loanTypes": ["Home Loan", "MSME Loan"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.5946, 12.9716] },
+      "properties": { 
+        "id": 6,
+        "name": "Karnataka Rural Livelihood Mission", 
+        "category": "SCA", 
+        "state": "Karnataka",
+        "contact": "+91-80-22334455",
+        "loanTypes": ["Self-Help Group Loans", "Women Empowerment"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [77.2090, 28.6139] },
       "properties": { 
         "id": 7,
-        "name": "Uttar Pradesh Gramin Bank", 
-        "category": "RRB", 
-        "region": "Uttar Pradesh",
-        "contact": "+91-522-2556677",
-        "loanTypes": ["Kisan Credit Card", "Micro Loan"],
+        "name": "Delhi Financial Corporation", 
+        "category": "NBFC", 
+        "state": "Delhi",
+        "contact": "+91-11-23345678",
+        "loanTypes": ["MSME Loan", "Startup Loan"],
         "hasHighNPA": false 
       }
     },
@@ -97,9 +97,9 @@
       "geometry": { "type": "Point", "coordinates": [85.1376, 25.5941] },
       "properties": { 
         "id": 8,
-        "name": "Patna Micro-Finance NBFC", 
+        "name": "Bihar Micro-Finance NBFC", 
         "category": "NBFC", 
-        "region": "Bihar",
+        "state": "Bihar",
         "contact": "+91-612-2334455",
         "loanTypes": ["Micro Loan", "Dairy Loan"],
         "hasHighNPA": false 
@@ -107,53 +107,40 @@
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [88.3639, 22.5726] },
+      "geometry": { "type": "Point", "coordinates": [72.5714, 23.0225] },
       "properties": { 
         "id": 9,
-        "name": "Bengal State Cooperative Bank", 
-        "category": "Bank", 
-        "region": "West Bengal",
-        "contact": "+91-33-22445566",
-        "loanTypes": ["Home Loan", "MSME Loan"],
-        "hasHighNPA": false 
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [81.9936, 19.0784] },
-      "properties": { 
-        "id": 10,
-        "name": "Bastar Rural Development Agency", 
-        "category": "SCA", 
-        "region": "Chhattisgarh (Rural)",
-        "contact": "+91-771-2233445",
-        "loanTypes": ["Government Schemes", "Subsidized Loans", "Agriculture Loan"],
-        "hasHighNPA": false 
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [70.5694, 23.2420] },
-      "properties": { 
-        "id": 11,
-        "name": "Kutch Gramin Bank", 
+        "name": "Gujarat Rural Bank", 
         "category": "RRB", 
-        "region": "Gujarat (Rural)",
-        "contact": "+91-2832-255667",
+        "state": "Gujarat",
+        "contact": "+91-79-25566778",
         "loanTypes": ["Agriculture Loan", "Livestock Loan"],
         "hasHighNPA": false 
       }
     },
     {
       "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [91.7362, 26.1445] },
+      "geometry": { "type": "Point", "coordinates": [81.6296, 21.2514] },
       "properties": { 
-        "id": 12,
-        "name": "Assam State Rural Livelihood", 
+        "id": 10,
+        "name": "Chhattisgarh State Agency", 
         "category": "SCA", 
-        "region": "Assam",
-        "contact": "+91-361-2233445",
-        "loanTypes": ["Self-Help Group Loans", "Micro Credit"],
+        "state": "Chhattisgarh",
+        "contact": "+91-771-2233445",
+        "loanTypes": ["Government Schemes", "Subsidized Loans"],
+        "hasHighNPA": false 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [76.2711, 9.9312] },
+      "properties": { 
+        "id": 11,
+        "name": "Kerala Farmers Cooperative", 
+        "category": "RRB", 
+        "state": "Kerala",
+        "contact": "+91-484-2020202",
+        "loanTypes": ["Agriculture Loan", "Spice Plantation Loan"],
         "hasHighNPA": false 
       }
     },
@@ -161,12 +148,25 @@
       "type": "Feature",
       "geometry": { "type": "Point", "coordinates": [79.9796, 23.1815] },
       "properties": { 
-        "id": 13,
-        "name": "Jabalpur Central Bank", 
+        "id": 12,
+        "name": "Madhya Pradesh Central Bank", 
         "category": "Bank", 
-        "region": "Madhya Pradesh",
+        "state": "Madhya Pradesh",
         "contact": "+91-761-2445566",
         "loanTypes": ["Business Loan", "MSME Loan"],
+        "hasHighNPA": true 
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [91.7362, 26.1445] },
+      "properties": { 
+        "id": 13,
+        "name": "Assam State Rural Livelihood", 
+        "category": "SCA", 
+        "state": "Assam",
+        "contact": "+91-361-2233445",
+        "loanTypes": ["Self-Help Group Loans", "Micro Credit"],
         "hasHighNPA": false 
       }
     },
@@ -175,37 +175,11 @@
       "geometry": { "type": "Point", "coordinates": [83.9780, 19.3178] },
       "properties": { 
         "id": 14,
-        "name": "Rayagada Rural Micro-Finance", 
+        "name": "Odisha Rural Micro-Finance", 
         "category": "NBFC", 
-        "region": "Odisha (Rural)",
+        "state": "Odisha",
         "contact": "+91-6856-223344",
         "loanTypes": ["Micro Loan", "Farming Tools Loan"],
-        "hasHighNPA": false 
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [76.0827, 11.6016] },
-      "properties": { 
-        "id": 15,
-        "name": "Wayanad Farmers Bank", 
-        "category": "RRB", 
-        "region": "Kerala (Rural)",
-        "contact": "+91-4936-202020",
-        "loanTypes": ["Agriculture Loan", "Spice Plantation Loan"],
-        "hasHighNPA": false 
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": { "type": "Point", "coordinates": [85.9065, 26.1542] },
-      "properties": { 
-        "id": 16,
-        "name": "Darbhanga Dehati Bank", 
-        "category": "RRB", 
-        "region": "Bihar (Rural)",
-        "contact": "+91-6272-233445",
-        "loanTypes": ["Dairy Loan", "Kisan Credit Card"],
         "hasHighNPA": false 
       }
     }

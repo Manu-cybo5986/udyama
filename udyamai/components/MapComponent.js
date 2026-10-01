@@ -21,11 +21,13 @@ const icons = {
   Bank: createIcon('red'),
 };
 
-// Component to handle map center/zoom updates
+// Component to handle map center/zoom updates smoothly (Auto-Pan)
 function MapUpdater({ center, zoom }) {
   const map = useMap();
   useEffect(() => {
-    map.setView(center, zoom);
+    map.flyTo(center, zoom, {
+      duration: 1.5, // Smooth animation
+    });
   }, [center, zoom, map]);
   return null;
 }
@@ -33,49 +35,49 @@ function MapUpdater({ center, zoom }) {
 export default function MapComponent() {
   const [isMounted, setIsMounted] = useState(false);
   const [categoryFilter, setCategoryFilter] = useState('All');
-  const [regionFilter, setRegionFilter] = useState('All');
-  const [mapCenter, setMapCenter] = useState([22.9074, 79.0730]); // Center of India
+  const [stateFilter, setStateFilter] = useState('All');
+  const [mapCenter, setMapCenter] = useState([20.5937, 78.9629]); // Center of India
   const [mapZoom, setMapZoom] = useState(5); // National zoom level
 
   useEffect(() => { setIsMounted(true); }, []);
 
-  // Extract unique regions for the dropdown
-  const uniqueRegions = useMemo(() => {
-    const regions = new Set();
+  // Extract unique states for the dropdown
+  const uniqueStates = useMemo(() => {
+    const states = new Set();
     partnerData.features.forEach(partner => {
       if (!partner.properties.hasHighNPA) {
-        regions.add(partner.properties.region);
+        states.add(partner.properties.state);
       }
     });
-    return Array.from(regions).sort();
+    return Array.from(states).sort();
   }, []);
 
-  // Strict NPA suppression + category/region filtering
+  // Strict NPA suppression + category/state filtering
   const validPartners = partnerData.features.filter(partner => {
     const p = partner.properties;
     if (p.hasHighNPA) return false; // Strict suppression rule
 
     const matchesCategory = categoryFilter === 'All' || p.category === categoryFilter;
-    const matchesRegion   = regionFilter   === 'All' || p.region   === regionFilter;
+    const matchesState    = stateFilter === 'All'    || p.state === stateFilter;
 
-    return matchesCategory && matchesRegion;
+    return matchesCategory && matchesState;
   });
 
-  // Handle region change to update map center
-  const handleRegionChange = (e) => {
-    const selectedRegion = e.target.value;
-    setRegionFilter(selectedRegion);
+  // Handle state change to smoothly update map center
+  const handleStateChange = (e) => {
+    const selectedState = e.target.value;
+    setStateFilter(selectedState);
     
-    if (selectedRegion === 'All') {
-      setMapCenter([22.9074, 79.0730]); // India center
+    if (selectedState === 'All') {
+      setMapCenter([20.5937, 78.9629]); // India center
       setMapZoom(5);
     } else {
-      // Find a partner in the selected region to center the map on
-      const partnerInRegion = validPartners.find(p => p.properties.region === selectedRegion);
-      if (partnerInRegion) {
-        const [lng, lat] = partnerInRegion.geometry.coordinates;
+      // Find a partner in the selected state to center the map on
+      const partnerInState = validPartners.find(p => p.properties.state === selectedState);
+      if (partnerInState) {
+        const [lng, lat] = partnerInState.geometry.coordinates;
         setMapCenter([lat, lng]);
-        setMapZoom(9); // Closer zoom for specific region
+        setMapZoom(8); // Closer zoom for specific state
       }
     }
   };
@@ -83,11 +85,22 @@ export default function MapComponent() {
   if (!isMounted) return null;
 
   return (
-    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+    <div className="w-full flex flex-col gap-4">
       {/* Interactive Map Controls */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', zIndex: 10 }}>
+      <div className="flex flex-wrap gap-3 z-10">
         <select
-          style={{ padding: '8px 12px', border: '1px solid #cbd5e1', borderRadius: '6px', background: '#fff', fontSize: '14px', cursor: 'pointer', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}
+          className="px-3 py-2 border border-slate-300 rounded-md bg-white text-sm shadow-sm cursor-pointer"
+          value={stateFilter}
+          onChange={handleStateChange}
+        >
+          <option value="All">All States</option>
+          {uniqueStates.map(state => (
+            <option key={state} value={state}>{state}</option>
+          ))}
+        </select>
+        
+        <select
+          className="px-3 py-2 border border-slate-300 rounded-md bg-white text-sm shadow-sm cursor-pointer"
           value={categoryFilter}
           onChange={(e) => setCategoryFilter(e.target.value)}
         >
@@ -98,17 +111,6 @@ export default function MapComponent() {
           <option value="Bank">Banks</option>
         </select>
 
-        <select
-          style={{ padding: '8px 12px', border: '1px solid #cbd5e1', borderRadius: '6px', background: '#fff', fontSize: '14px', cursor: 'pointer', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}
-          value={regionFilter}
-          onChange={handleRegionChange}
-        >
-          <option value="All">All Regions (India)</option>
-          {uniqueRegions.map(region => (
-            <option key={region} value={region}>{region}</option>
-          ))}
-        </select>
-        
         <button 
           onClick={() => {
             if (navigator.geolocation) {
@@ -116,7 +118,7 @@ export default function MapComponent() {
                 (position) => {
                   setMapCenter([position.coords.latitude, position.coords.longitude]);
                   setMapZoom(11);
-                  setRegionFilter('All');
+                  setStateFilter('All');
                 },
                 (error) => {
                   console.error("Error getting location: ", error);
@@ -127,27 +129,18 @@ export default function MapComponent() {
               alert("Geolocation is not supported by this browser.");
             }
           }}
-          style={{ padding: '8px 16px', border: 'none', borderRadius: '6px', background: '#3b82f6', color: 'white', fontSize: '14px', cursor: 'pointer', fontWeight: '500', boxShadow: '0 1px 3px rgba(0,0,0,0.08)' }}
+          className="px-4 py-2 border-none rounded-md bg-blue-500 text-white text-sm font-medium cursor-pointer shadow-sm hover:bg-blue-600 transition-colors"
         >
           📍 Locate Me
         </button>
       </div>
 
       {/* Responsive Map Container */}
-      <div style={{
-        height: '550px',
-        width: '100%',
-        borderRadius: '12px',
-        overflow: 'hidden',
-        border: '1px solid #cbd5e1',
-        boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.06)',
-        position: 'relative',
-        zIndex: 0,
-      }}>
+      <div className="h-[55vh] min-h-[450px] w-full rounded-xl overflow-hidden border border-slate-300 shadow-inner relative z-0">
         <MapContainer
           center={mapCenter}
           zoom={mapZoom}
-          style={{ height: '100%', width: '100%' }}
+          className="h-full w-full"
         >
           <MapUpdater center={mapCenter} zoom={mapZoom} />
           <TileLayer
@@ -158,7 +151,7 @@ export default function MapComponent() {
           {validPartners.map((partner, index) => {
             // GeoJSON stores [longitude, latitude] — swap for Leaflet's [lat, lng]
             const [lng, lat] = partner.geometry.coordinates;
-            const { name, category, region, loanTypes, contact } = partner.properties;
+            const { name, category, state, loanTypes, contact } = partner.properties;
 
             return (
               <Marker
@@ -174,7 +167,7 @@ export default function MapComponent() {
                         {category}
                       </span>
                     </div>
-                    <p className="m-0 text-sm text-slate-600 mb-1">📍 <strong>Region:</strong> {region}</p>
+                    <p className="m-0 text-sm text-slate-600 mb-1">📍 <strong>State:</strong> {state}</p>
                     {contact && <p className="m-0 text-sm text-slate-600 mb-1">📞 <strong>Contact:</strong> {contact}</p>}
                     {loanTypes && (
                       <div className="mt-2">
